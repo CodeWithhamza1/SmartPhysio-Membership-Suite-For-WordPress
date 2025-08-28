@@ -191,6 +191,231 @@ class SmartPhysio_Membership_Suite {
 
 .wp-list-table .button:hover {
     background: #3B82F6;
+}
+
+/* Enhanced form styling */
+#sps-update-form {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-top: 20px;
+}
+
+#sps-update-form .button-primary {
+    background: linear-gradient(90deg, #3B82F6, #06B6D4);
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(59,130,246,0.3);
+}
+
+#sps-update-form .button-primary:hover {
+    background: linear-gradient(90deg, #1D4ED8, #0891B2);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(59,130,246,0.4);
+}
+
+/* Checkbox and select styling */
+#sps-update-form input[type=\"checkbox\"] {
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+#sps-update-form select {
+    padding: 6px 12px;
+    border: 1px solid #CBD5E1;
+    border-radius: 4px;
+    background: white;
+    cursor: pointer;
+}
+
+/* Success message styling */
+.notice-success {
+    border-left-color: #10B981 !important;
+    background: #ECFDF5 !important;
+}
+
+.notice-success p {
+    color: #065F46 !important;
+    font-weight: 500;
+}
+
+/* Search and Filter Interface */
+.sps-search-filter-form {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+}
+
+.sps-search-filter-row {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.sps-search-box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex: 1;
+    min-width: 300px;
+}
+
+.sps-search-input {
+    flex: 1;
+    padding: 8px 12px;
+    border: 2px solid #E2E8F0;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: border-color 0.2s ease;
+}
+
+.sps-search-input:focus {
+    outline: none;
+    border-color: #3B82F6;
+    box-shadow: 0 0 0 3px rgba(59,130,246,0.1);
+}
+
+.sps-filter-box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.sps-filter-box select {
+    padding: 8px 12px;
+    border: 2px solid #E2E8F0;
+    border-radius: 6px;
+    background: white;
+    font-size: 14px;
+    min-width: 150px;
+}
+
+.sps-clear-filters {
+    margin-left: auto;
+}
+
+.sps-clear-filters .button {
+    background: #6B7280;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.sps-clear-filters .button:hover {
+    background: #4B5563;
+    color: white;
+}
+
+/* Results Summary */
+.sps-results-summary {
+    background: #F8FAFC;
+    padding: 15px 20px;
+    border-radius: 6px;
+    border-left: 4px solid #3B82F6;
+    margin: 20px 0;
+}
+
+.sps-results-summary p {
+    margin: 0;
+    color: #374151;
+    font-size: 14px;
+}
+
+.sps-results-summary strong {
+    color: #1F2937;
+}
+
+/* No Results Styling */
+.wp-list-table tbody tr td[colspan=\"8\"] {
+    background: #F9FAFB;
+}
+
+.wp-list-table tbody tr td[colspan=\"8\"] p {
+    margin: 10px 0;
+}
+
+.wp-list-table tbody tr td[colspan=\"8\"] a {
+    color: #3B82F6;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.wp-list-table tbody tr td[colspan=\"8\"] a:hover {
+    text-decoration: underline;
+}
+
+/* Search Highlighting */
+.sps-highlight {
+    background-color: #FEF3C7 !important;
+    border-radius: 3px;
+    padding: 2px 4px;
+    font-weight: 500;
+}
+
+/* Search Input Placeholder */
+.sps-search-input::placeholder {
+    color: #9CA3AF;
+    font-style: italic;
+}
+
+/* Loading State */
+.sps-search-filter-form.loading {
+    opacity: 0.7;
+    pointer-events: none;
+}
+
+.sps-search-filter-form.loading::after {
+    content: 'Searching...';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #3B82F6;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 14px;
+    z-index: 1000;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .sps-search-filter-row {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 15px;
+    }
+    
+    .sps-search-box {
+        min-width: auto;
+    }
+    
+    .sps-filter-box {
+        justify-content: center;
+    }
+    
+    .sps-clear-filters {
+        margin-left: 0;
+        text-align: center;
+    }
+    
+    #sps-update-form {
+        padding: 15px;
+        margin: 10px;
+    }
+    
+    .wp-list-table {
+        font-size: 14px;
+    }
 }";
     }
 
@@ -233,7 +458,54 @@ class SmartPhysio_Membership_Suite {
 
     private function get_admin_script_js_content() {
         return "jQuery(document).ready(function($) {
-    // Add any admin-specific JavaScript here
+    // Auto-update eligibility when checkboxes change
+    $('input[type=\"checkbox\"]').on('change', function() {
+        var row = $(this).closest('tr');
+        var googleReview = row.find('input[name*=\"google_review\"]').is(':checked');
+        var socialFollow = row.find('input[name*=\"social_follow\"]').is(':checked');
+        var sharedContacts = row.find('input[name*=\"shared_contacts\"]').is(':checked');
+        var referredPatient = row.find('input[name*=\"referred_patient\"]').is(':checked');
+        
+        var eligibilitySelect = row.find('select[name*=\"is_eligible\"]');
+        
+        // Auto-calculate eligibility
+        if (googleReview && socialFollow && sharedContacts && referredPatient) {
+            eligibilitySelect.val('1');
+        } else {
+            eligibilitySelect.val('0');
+        }
+    });
+    
+    // Search functionality enhancements
+    $('.sps-search-input').on('keypress', function(e) {
+        if (e.which === 13) { // Enter key
+            e.preventDefault();
+            $(this).closest('form').submit();
+        }
+    });
+    
+    // Auto-submit filter changes
+    $('.sps-filter-box select').on('change', function() {
+        $(this).closest('form').submit();
+    });
+    
+    // Show success message if it exists
+    if ($('.notice-success').length > 0) {
+        setTimeout(function() {
+            $('.notice-success').fadeOut();
+        }, 3000);
+    }
+    
+    // Highlight search terms in results
+    var searchTerm = $('.sps-search-input').val();
+    if (searchTerm) {
+        $('.wp-list-table tbody td').each(function() {
+            var text = $(this).text();
+            if (text.toLowerCase().indexOf(searchTerm.toLowerCase()) !== -1) {
+                $(this).addClass('sps-highlight');
+            }
+        });
+    }
 });";
     }
 
@@ -428,127 +700,209 @@ class SmartPhysio_Membership_Suite {
     }
 
     $filter = isset($_GET['filter']) ? sanitize_text_field($_GET['filter']) : 'all';
-    $where = $filter === 'eligible' ? 'WHERE is_eligible = 1' : ($filter === 'ineligible' ? 'WHERE is_eligible = 0' : '');
+    $search = isset($_GET['search']) ? sanitize_text_field($_GET['search']) : '';
     
-    $members = $wpdb->get_results("SELECT * FROM $this->table_name $where");
+    // Build WHERE clause for filtering and searching
+    $where_conditions = [];
+    $where_values = [];
+    
+    // Add filter condition
+    if ($filter === 'eligible') {
+        $where_conditions[] = 'is_eligible = 1';
+    } elseif ($filter === 'ineligible') {
+        $where_conditions[] = 'is_eligible = 0';
+    }
+    
+    // Add search condition
+    if (!empty($search)) {
+        $where_conditions[] = '(full_name LIKE %s OR email LIKE %s)';
+        $where_values[] = '%' . $wpdb->esc_like($search) . '%';
+        $where_values[] = '%' . $wpdb->esc_like($search) . '%';
+    }
+    
+    // Combine WHERE conditions
+    $where_clause = '';
+    if (!empty($where_conditions)) {
+        $where_clause = 'WHERE ' . implode(' AND ', $where_conditions);
+    }
+    
+    // Prepare and execute query
+    if (!empty($where_values)) {
+        $query = $wpdb->prepare("SELECT * FROM $this->table_name $where_clause", $where_values);
+    } else {
+        $query = "SELECT * FROM $this->table_name $where_clause";
+    }
+    
+    $members = $wpdb->get_results($query);
     ?>
     <div class="wrap">
         <h1>SmartPhysio Membership Suite</h1>
-        <form method="get">
+        
+        <!-- Search and Filter Form -->
+        <form method="get" class="sps-search-filter-form">
             <input type="hidden" name="page" value="sps-membership-suite">
-            <select name="filter">
-                <option value="all" <?php selected($filter, 'all'); ?>>All Members</option>
-                <option value="eligible" <?php selected($filter, 'eligible'); ?>>Eligible</option>
-                <option value="ineligible" <?php selected($filter, 'ineligible'); ?>>Ineligible</option>
-            </select>
-            <button type="submit" class="button">Filter</button>
+            
+            <div class="sps-search-filter-row">
+                <div class="sps-search-box">
+                    <input type="text" name="search" value="<?php echo esc_attr($search); ?>" placeholder="Search by name or email..." class="sps-search-input">
+                    <button type="submit" class="button">Search</button>
+                </div>
+                
+                <div class="sps-filter-box">
+                    <select name="filter">
+                        <option value="all" <?php selected($filter, 'all'); ?>>All Members</option>
+                        <option value="eligible" <?php selected($filter, 'eligible'); ?>>Eligible</option>
+                        <option value="ineligible" <?php selected($filter, 'ineligible'); ?>>Ineligible</option>
+                    </select>
+                    <button type="submit" class="button">Filter</button>
+                </div>
+                
+                <?php if (!empty($search) || $filter !== 'all'): ?>
+                    <div class="sps-clear-filters">
+                        <a href="?page=sps-membership-suite" class="button">Clear All Filters</a>
+                    </div>
+                <?php endif; ?>
+            </div>
         </form>
+        
+        <!-- Export Form -->
         <form method="post" style="margin: 10px 0;">
             <?php wp_nonce_field('sps_export_csv'); ?>
             <button type="submit" name="sps_export_csv" class="button">Export to CSV</button>
         </form>
-        <table class="wp-list-table widefat fixed striped">
-            <thead>
-                <tr>
-                    <th>Name</th>
-                    <th>Email</th>
-                    <th>Phone</th>
-                    <th>Google Review</th>
-                    <th>Social Follow</th>
-                    <th>Shared Contacts</th>
-                    <th>Referred Patient</th>
-                    <th>Eligibility</th>
-                    <th>Actions</th>
-                </tr>
-            </thead>
-            <tbody>
-                <?php foreach ($members as $member): ?>
+        
+        <!-- Results Summary -->
+        <div class="sps-results-summary">
+            <p>Showing <strong><?php echo count($members); ?></strong> member(s)
+                <?php if (!empty($search)): ?>
+                    for "<strong><?php echo esc_html($search); ?></strong>"
+                <?php endif; ?>
+                <?php if ($filter !== 'all'): ?>
+                    (<?php echo ucfirst($filter); ?> only)
+                <?php endif; ?>
+            </p>
+        </div>
+        
+        <!-- Main Update Form -->
+        <form method="post" id="sps-update-form">
+            <?php wp_nonce_field('sps_update_status'); ?>
+            <table class="wp-list-table widefat fixed striped">
+                <thead>
                     <tr>
-                        <td><?php echo esc_html($member->full_name); ?></td>
-                        <td><?php echo esc_html($member->email); ?></td>
-                        <td><?php echo esc_html($member->phone); ?></td>
-                        <td>
-                            <form method="post" style="display: inline;">
-                                <?php wp_nonce_field('sps_update_status'); ?>
-                                <input type="hidden" name="member_id" value="<?php echo $member->id; ?>">
-                                <input type="checkbox" name="google_review" <?php checked($member->google_review); ?> style="vertical-align: middle;">
-                            </form>
-                        </td>
-                        <td>
-                            <form method="post" style="display: inline;">
-                                <?php wp_nonce_field('sps_update_status'); ?>
-                                <input type="hidden" name="member_id" value="<?php echo $member->id; ?>">
-                                <input type="checkbox" name="social_follow" <?php checked($member->social_follow); ?> style="vertical-align: middle;">
-                            </form>
-                        </td>
-                        <td>
-                            <form method="post" style="display: inline;">
-                                <?php wp_nonce_field('sps_update_status'); ?>
-                                <input type="hidden" name="member_id" value="<?php echo $member->id; ?>">
-                                <input type="checkbox" name="shared_contacts" <?php checked($member->shared_contacts); ?> style="vertical-align: middle;">
-                            </form>
-                        </td>
-                        <td>
-                            <form method="post" style="display: inline;">
-                                <?php wp_nonce_field('sps_update_status'); ?>
-                                <input type="hidden" name="member_id" value="<?php echo $member->id; ?>">
-                                <input type="checkbox" name="referred_patient" <?php checked($member->referred_patient); ?> style="vertical-align: middle;">
-                            </form>
-                        </td>
-                        <td>
-                            <form method="post" style="display: inline;">
-                                <?php wp_nonce_field('sps_update_status'); ?>
-                                <input type="hidden" name="member_id" value="<?php echo $member->id; ?>">
-                                <select name="is_eligible" style="vertical-align: middle;">
-                                    <option value="0" <?php selected($member->is_eligible, 0); ?>>Ineligible</option>
-                                    <option value="1" <?php selected($member->is_eligible, 1); ?>>Eligible</option>
-                                </select>
-                            </form>
-                        </td>
-                        <td>
-                            <form method="post" style="display: inline;">
-                                <?php wp_nonce_field('sps_update_status'); ?>
-                                <input type="hidden" name="member_id" value="<?php echo $member->id; ?>">
-                                <button type="submit" name="sps_update_status" class="button">Update</button>
-                            </form>
-                        </td>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Phone</th>
+                        <th>Google Review</th>
+                        <th>Social Follow</th>
+                        <th>Shared Contacts</th>
+                        <th>Referred Patient</th>
+                        <th>Eligibility</th>
                     </tr>
-                <?php endforeach; ?>
-            </tbody>
-        </table>
+                </thead>
+                <tbody>
+                    <?php if (empty($members)): ?>
+                        <tr>
+                            <td colspan="8" style="text-align: center; padding: 40px; color: #666;">
+                                <p>No members found matching your search criteria.</p>
+                                <p><a href="?page=sps-membership-suite">View all members</a></p>
+                            </td>
+                        </tr>
+                    <?php else: ?>
+                        <?php foreach ($members as $member): ?>
+                            <tr>
+                                <td><?php echo esc_html($member->full_name); ?></td>
+                                <td><?php echo esc_html($member->email); ?></td>
+                                <td><?php echo esc_html($member->phone); ?></td>
+                                <td>
+                                    <input type="checkbox" name="google_review[<?php echo $member->id; ?>]" <?php checked($member->google_review, 1); ?> style="vertical-align: middle;">
+                                </td>
+                                <td>
+                                    <input type="checkbox" name="social_follow[<?php echo $member->id; ?>]" <?php checked($member->social_follow, 1); ?> style="vertical-align: middle;">
+                                </td>
+                                <td>
+                                    <input type="checkbox" name="shared_contacts[<?php echo $member->id; ?>]" <?php checked($member->shared_contacts, 1); ?> style="vertical-align: middle;">
+                                </td>
+                                <td>
+                                    <input type="checkbox" name="referred_patient[<?php echo $member->id; ?>]" <?php checked($member->referred_patient, 1); ?> style="vertical-align: middle;">
+                                </td>
+                                <td>
+                                    <select name="is_eligible[<?php echo $member->id; ?>]" style="vertical-align: middle;">
+                                        <option value="0" <?php selected($member->is_eligible, 0); ?>>Ineligible</option>
+                                        <option value="1" <?php selected($member->is_eligible, 1); ?>>Eligible</option>
+                                    </select>
+                                </td>
+                            </tr>
+                        <?php endforeach; ?>
+                    <?php endif; ?>
+                </tbody>
+            </table>
+            <?php if (!empty($members)): ?>
+                <div style="margin-top: 20px;">
+                    <button type="submit" name="sps_update_status" class="button button-primary">Update All Changes</button>
+                </div>
+            <?php endif; ?>
+        </form>
     </div>
     <?php
 }
 
     private function update_member_status() {
         global $wpdb;
-        if (!isset($_POST['member_id']) || !check_admin_referer('sps_update_status')) {
+        if (!check_admin_referer('sps_update_status')) {
             return;
         }
 
-        $member_id = absint($_POST['member_id']);
-        $data = [
-            'google_review' => isset($_POST['google_review']) ? 1 : 0,
-            'social_follow' => isset($_POST['social_follow']) ? 1 : 0,
-            'shared_contacts' => isset($_POST['shared_contacts']) ? 1 : 0,
-            'referred_patient' => isset($_POST['referred_patient']) ? 1 : 0,
-            'is_eligible' => isset($_POST['is_eligible']) ? absint($_POST['is_eligible']) : 0
-        ];
+        // Get all the form data arrays
+        $google_reviews = isset($_POST['google_review']) ? $_POST['google_review'] : [];
+        $social_follows = isset($_POST['social_follow']) ? $_POST['social_follow'] : [];
+        $shared_contacts = isset($_POST['shared_contacts']) ? $_POST['shared_contacts'] : [];
+        $referred_patients = isset($_POST['referred_patient']) ? $_POST['referred_patient'] : [];
+        $is_eligibles = isset($_POST['is_eligible']) ? $_POST['is_eligible'] : [];
 
-        // Ensure eligibility requires all conditions
-        if ($data['google_review'] && $data['social_follow'] && $data['shared_contacts'] && $data['referred_patient']) {
-            $data['is_eligible'] = 1;
-        } else {
-            $data['is_eligible'] = 0;
+        // Process each member's data
+        foreach ($google_reviews as $member_id => $value) {
+            $member_id = absint($member_id);
+            
+            // Get current values for this member
+            $current_member = $wpdb->get_row($wpdb->prepare(
+                "SELECT * FROM $this->table_name WHERE id = %d",
+                $member_id
+            ));
+
+            if (!$current_member) {
+                continue;
+            }
+
+            // Prepare data for update
+            $data = [
+                'google_review' => isset($google_reviews[$member_id]) ? 1 : 0,
+                'social_follow' => isset($social_follows[$member_id]) ? 1 : 0,
+                'shared_contacts' => isset($shared_contacts[$member_id]) ? 1 : 0,
+                'referred_patient' => isset($referred_patients[$member_id]) ? 1 : 0,
+                'is_eligible' => isset($is_eligibles[$member_id]) ? absint($is_eligibles[$member_id]) : 0
+            ];
+
+            // Auto-calculate eligibility based on all conditions being met
+            if ($data['google_review'] && $data['social_follow'] && $data['shared_contacts'] && $data['referred_patient']) {
+                $data['is_eligible'] = 1;
+            } else {
+                $data['is_eligible'] = 0;
+            }
+
+            // Update the member
+            $wpdb->update(
+                $this->table_name,
+                $data,
+                ['id' => $member_id],
+                ['%d', '%d', '%d', '%d', '%d'],
+                ['%d']
+            );
         }
 
-        $wpdb->update(
-            $this->table_name,
-            $data,
-            ['id' => $member_id],
-            ['%d', '%d', '%d', '%d', '%d'],
-            ['%d']
-        );
+        // Add success message
+        add_action('admin_notices', function() {
+            echo '<div class="notice notice-success is-dismissible"><p>Member statuses updated successfully!</p></div>';
+        });
     }
 
     private function export_to_csv() {
